@@ -145,6 +145,6 @@ steps:
     imageSource: 'imagename'
     sourceImageName: 'shipping-service'
     repositoryName: 'shipping-service'
-    pushTag: '1'
+    pushTag: '2'
     autoCreateRepository: true
     forceDockerNamingConventions: true 
