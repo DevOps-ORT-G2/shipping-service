@@ -1,0 +1,23 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+- staging
+- qa
+- develop
+
+pool:
+  vmImage: windows-2019
+
+steps:
+- task: TriggerPipeline@2
+  inputs:
+    serviceConnection: 'Nuevo conector con azure devops api'
+    project: '5bbf4689-b099-4048-ac8d-75991900f2f0'
+    Pipeline: 'Build'
+    buildDefinition: '19'
+    Branch: '$(Build.SourceBranchName)'
+    buildapiversion: '6.0'
