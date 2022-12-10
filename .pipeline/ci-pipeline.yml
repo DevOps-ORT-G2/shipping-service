@@ -9,15 +9,5 @@ trigger:
 - qa
 - develop
 
-pool:
-  vmImage: windows-2019
-
 steps:
-- task: TriggerPipeline@2
-  inputs:
-    serviceConnection: 'Nuevo conector con azure devops api'
-    project: '5bbf4689-b099-4048-ac8d-75991900f2f0'
-    Pipeline: 'Build'
-    buildDefinition: '19'
-    Branch: '$(Build.SourceBranchName)'
-    buildapiversion: '6.0'
+- script: echo "trigger ci"
